@@ -1,0 +1,406 @@
+{
+  "cart": {
+    "items": [
+      {
+        "id": 1,
+        "productId": 1,
+        "quantity": 2
+      },
+      {
+        "id": 2,
+        "productId": 3,
+        "quantity": 1
+      }
+    ]
+  },
+  "products": [
+    {
+      "id": 1,
+      "name": "Product 1",
+      "price": 10.99
+    },
+    {
+      "id": 2,
+      "name": "Product 2",
+      "price": 19.99
+    },
+    {
+      "id": 3,
+      "name": "Product 3",
+      "price": 7.5
+    }
+  ],
+  "getdevices": [
+    {
+      "result": [
+        {
+          "memberPlanID": "ee6e509e-187d-4377-b9ee-b1be1c93d5b0",
+          "productName": "Precision X1",
+          "planName": "Plus",
+          "deviceQuantity": 2,
+          "deviceRegistered": 2,
+          "registeredDevices": [
+            {
+              "deviceID": "56b77f5b-1b6d-49d4-b127-9001fef0581a",
+              "memberPlanID": "ee6e509e-187d-4377-b9ee-b1be1c93d5b0",
+              "deviceName": "new pc",
+              "RegisteredDate": "2023/3/10"
+            },
+            {
+              "deviceID": "e9191001-400f-4ed7-bb32-c8dd30b00e53",
+              "memberPlanID": "ee6e509e-187d-4377-b9ee-b1be1c93d5b0",
+              "deviceName": "Hank's PC1",
+              "RegisteredDate": "2023/3/21"
+            }
+          ]
+        }
+      ],
+      "isSuccess": true,
+      "message": null,
+      "errorCode": 0
+    }
+  ],
+  "getorderhistory": [
+    {
+      "result": [
+        {
+          "orderID": "b327f4ed-0aa5-46db-9fc0-2aada6ef41dc",
+          "orderNO": "230312000001",
+          "productName": "Precision X1",
+          "planName": "Plus",
+          "OrderDate": "2022/3/20",
+          "totalPrice": 3.98
+        },
+        {
+          "orderID": "b3f17f60-befa-44ff-a04d-e4c96b704858",
+          "orderNO": "230312000002",
+          "productName": "Precision X1",
+          "planName": "Plus",
+          "OrderDate": "2023/3/20",
+          "totalPrice": 3.98
+        }
+      ],
+      "isSuccess": true,
+      "message": null,
+      "errorCode": 0
+    }
+  ],
+  "getsubscriptionplan": [
+    {
+      "result": [
+        {
+          "planID": "e76f665a-1129-4d26-9b88-4ece7db42807",
+          "productName": "Precision X1",
+          "planName": "Plus",
+          "period": "Year",
+          "msrp": 2.59,
+          "sellPrice": 1.99,
+          "monthQuantity": 12,
+          "deviceQuantity": 1,
+          "brief": "This is PX1 brief",
+          "renewInfo": "Automatically renews at $1.99/year, unless the renewal is cancelled. Price is subject to change."
+        },
+        {
+          "planID": "89b26ca7-d17d-42da-860b-2cae63f03868",
+          "productName": "Precision X1",
+          "planName": "Advanced",
+          "period": "Year",
+          "msrp": 14.99,
+          "sellPrice": 9.99,
+          "monthQuantity": 12,
+          "deviceQuantity": 1,
+          "brief": "This is PX1 Advanced brief",
+          "renewInfo": "Automatically renews at $9.99/year, unless the renewal is cancelled. Price is subject to change."
+        }
+      ],
+      "isSuccess": true,
+      "message": null,
+      "errorCode": 0
+    }
+  ],
+  "getsubscriptionstatus": [
+    {
+      "result": [
+        {
+          "orderID": "b3f17f60-befa-44ff-a04d-e4c96b704858",
+          "orderNO": "230312000002",
+          "productName": "Precision X1",
+          "planName": "Plus",
+          "StartDate": "2023/3/20",
+          "EndDate": "2024/3/19",
+          "deviceTotal": 2,
+          "deviceRegistered": 2,
+          "memberPlanID": "ee6e509e-187d-4377-b9ee-b1be1c93d5b0",
+          "autoRenew": true
+        }
+      ],
+      "isSuccess": true,
+      "message": null,
+      "errorCode": 0
+    }
+  ],
+  "accordionData": [
+    {
+      "id": "1",
+      "title": "How to use TailGrids?",
+      "content": "It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available."
+    },
+    {
+      "id": "2",
+      "title": "How to download icons from LineIcons?",
+      "content": "It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available."
+    },
+    {
+      "id": "3",
+      "title": "Is GrayGrids part of UI deck?",
+      "content": "It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available."
+    },
+    {
+      "id": "4",
+      "title": "Can I use this template for commercial project?",
+      "content": "It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available."
+    },
+    {
+      "id": "5",
+      "title": "Do you have plan to releasing Play Pro?",
+      "content": "It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available."
+    },
+    {
+      "id": "6",
+      "title": "Where and how to host this template?",
+      "content": "It takes 2-3 weeks to get your first blog post ready. That includes the in-depth research & creation of your monthly content marketing strategy that we do before writing your first blog post, Ipsum available."
+    }
+  ],
+  "products00": [
+    {
+      "id": 1,
+      "title": "Fjallraven - Foldsack No. 1 Backpack, Fits 15 Laptops",
+      "price": 109.95,
+      "description": "Your perfect pack for everyday use and walks in the forest. Stash your laptop (up to 15 inches) in the padded sleeve, your everyday",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Mens Cotton Jacket",
+      "price": 55.99,
+      "description": "great outerwear jackets for Spring/Autumn/Winter, suitable for many occasions, such as working, hiking, camping, mountain/rock climbing, cycling, traveling or other outdoors. Good gift choice for you or your family member. A warm hearted love to Father, husband or son in this thanksgiving or Christmas Day.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Mens Casual Slim Fit",
+      "price": 15.99,
+      "description": "The color could be slightly different between on the screen and in practice. / Please note that body builds vary by person, therefore, detailed size information should be reviewed below on the product description.",
+      "category": "men's clothing",
+      "image": "https://fakestoreapi.com/img/71YXzeOuslL._AC_UY879_.jpg"
+    },
+    {
+      "id": 7,
+      "title": "White Gold Plated Princess",
+      "price": 9.99,
+      "description": "Classic Created Wedding Engagement Solitaire Diamond Promise Ring for Her. Gifts to spoil your love more for Engagement, Wedding, Anniversary, Valentine's Day...",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/71YAIFU48IL._AC_UL640_QL65_ML3_.jpg"
+    },
+    {
+      "id": 8,
+      "title": "Pierced Owl Rose Gold Plated Stainless Steel Double",
+      "price": 10.99,
+      "description": "Rose Gold Plated Double Flared Tunnel Plug Earrings. Made of 316L Stainless Steel",
+      "category": "jewelery",
+      "image": "https://fakestoreapi.com/img/51UDEzMJVpL._AC_UL640_QL65_ML3_.jpg"
+    },
+    {
+      "id": 15,
+      "title": "BIYLACLESEN Women's 3-in-1 Snowboard Jacket Winter Coats",
+      "price": 56.99,
+      "description": "Note:The Jackets is US standard size, Please choose size as your usual wear Material: 100% Polyester; Detachable Liner Fabric: Warm Fleece. Detachable Functional Liner: Skin Friendly, Lightweigt and Warm.Stand Collar Liner jacket, keep you warm in cold weather. Zippered Pockets: 2 Zippered Hand Pockets, 2 Zippered Pockets on Chest (enough to keep cards or keys)and 1 Hidden Pocket Inside.Zippered Hand Pockets and Hidden Pocket keep your things secure. Humanized Design: Adjustable and Detachable Hood and Adjustable cuff to prevent the wind and water,for a comfortable fit. 3 in 1 Detachable Design provide more convenience, you can separate the coat and inner as needed, or wear it together. It is suitable for different season and help you adapt to different climates",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/51Y5NI-I5jL._AC_UX679_.jpg"
+    },
+    {
+      "id": 16,
+      "title": "Lock and Love Women's Removable Hooded Faux Leather Moto Biker Jacket",
+      "price": 29.95,
+      "description": "100% POLYURETHANE(shell) 100% POLYESTER(lining) 75% POLYESTER 25% COTTON (SWEATER), Faux leather material for style and comfort / 2 pockets of front, 2-For-One Hooded denim style faux leather jacket, Button detail on waist / Detail stitching at sides, HAND WASH ONLY / DO NOT BLEACH / LINE DRY / DO NOT IRON",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/81XH0e8fefL._AC_UY879_.jpg"
+    },
+    {
+      "id": 17,
+      "title": "Rain Jacket Women Windbreaker Striped Climbing Raincoats",
+      "price": 39.99,
+      "description": "Lightweight perfet for trip or casual wear---Long sleeve with hooded, adjustable drawstring waist design. Button and zipper front closure raincoat, fully stripes Lined and The Raincoat has 2 side pockets are a good size to hold all kinds of things, it covers the hips, and the hood is generous but doesn't overdo it.Attached Cotton Lined Hood with Adjustable Drawstrings give it a real styled look.",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/71HblAHs5xL._AC_UY879_-2.jpg"
+    },
+    {
+      "id": 18,
+      "title": "MBJ Women's Solid Short Sleeve Boat Neck V ",
+      "price": 9.85,
+      "description": "95% RAYON 5% SPANDEX, Made in USA or Imported, Do Not Bleach, Lightweight fabric with great stretch for comfort, Ribbed on sleeves and neckline / Double stitching on bottom hem",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/71z3kpMAYsL._AC_UY879_.jpg"
+    },
+    {
+      "id": 19,
+      "title": "Opna Women's Short Sleeve Moisture",
+      "price": 7.95,
+      "description": "100% Polyester, Machine wash, 100% cationic polyester interlock, Machine Wash & Pre Shrunk for a Great Fit, Lightweight, roomy and highly breathable with moisture wicking fabric which helps to keep moisture away, Soft Lightweight Fabric with comfortable V-neck collar and a slimmer fit, delivers a sleek, more feminine silhouette and Added Comfort",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/51eg55uWmdL._AC_UX679_.jpg"
+    },
+    {
+      "id": 20,
+      "title": "DANVOUY Womens T Shirt Casual Cotton Short",
+      "price": 12.99,
+      "description": "95%Cotton,5%Spandex, Features: Casual, Short Sleeve, Letter Print,V-Neck,Fashion Tees, The fabric is soft and has some stretch., Occasion: Casual/Office/Beach/School/Home/Street. Season: Spring,Summer,Autumn,Winter.",
+      "category": "women's clothing",
+      "image": "https://fakestoreapi.com/img/61pHAEJ4NML._AC_UX679_.jpg"
+    }
+  ],
+  "users": [
+    {
+      "id": 1,
+      "username": "admin",
+      "email": "admin@subscription.com",
+      "password": "admin1234",
+      "createdAt": "2023-02-01 09:44:53",
+      "updatedAt": "2023-02-01 09:44:53"
+    },
+    {
+      "id": 2,
+      "username": "test",
+      "email": "test@subscription.com",
+      "password": "test",
+      "createdAt": "2023-02-22 13:14:13",
+      "updatedAt": "2023-02-22 13:14:13"
+    }
+  ],
+  "auth": {
+    "login": [
+      {
+        "id": 1,
+        "username": "admin",
+        "email": "admin@subscription.com",
+        "password": "admin1234",
+        "createdAt": "2023-02-01 09:44:53",
+        "updatedAt": "2023-02-01 09:44:53"
+      },
+      {
+        "id": 2,
+        "username": "test",
+        "email": "test@subscription.com",
+        "password": "test",
+        "createdAt": "2023-02-22 13:14:13",
+        "updatedAt": "2023-02-22 13:14:13"
+      }
+    ]
+  },
+  "roles": [
+    {
+      "id": 1,
+      "name": "user",
+      "createdAt": "2023-02-01 09:44:53",
+      "updatedAt": "2023-02-01 09:44:53"
+    },
+    {
+      "id": 2,
+      "name": "moderator",
+      "createdAt": "2023-02-22 13:14:13",
+      "updatedAt": "2023-02-22 13:14:13"
+    },
+    {
+      "id": 3,
+      "name": "admin",
+      "createdAt": "2023-02-22 13:15:13",
+      "updatedAt": "2023-02-22 13:15:13"
+    }
+  ],
+  "user_roles": [
+    {
+      "createdAt": "2023-02-01 09:44:53",
+      "updatedAt": "2023-02-01 09:44:53",
+      "roleId": "1",
+      "userId": "2"
+    },
+    {
+      "createdAt": "2023-02-22 13:14:13",
+      "updatedAt": "2023-02-22 13:14:13",
+      "roleId": "2",
+      "userId": "2"
+    },
+    {
+      "createdAt": "2023-02-22 13:15:13",
+      "updatedAt": "2023-02-22 13:15:13",
+      "roleId": "3",
+      "userId": "2"
+    }
+  ],
+  "productsDB": [
+    {
+      "id": 1,
+      "title": "Tênis de Caminhada Leve Confortável",
+      "price": 179.9,
+      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg"
+    },
+    {
+      "id": 2,
+      "title": "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
+      "price": 139.9,
+      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg"
+    },
+    {
+      "id": 3,
+      "title": "Tênis Adidas Duramo Lite 2.0",
+      "price": 219.9,
+      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis3.jpg"
+    },
+    {
+      "id": 5,
+      "title": "Tênis VR Caminhada Confortável Detalhes Couro Masculino",
+      "price": 139.9,
+      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis2.jpg"
+    },
+    {
+      "id": 6,
+      "title": "Tênis Adidas Duramo Lite 2.0",
+      "price": 219.9,
+      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis3.jpg"
+    },
+    {
+      "id": 4,
+      "title": "Tênis de Caminhada Leve Confortável",
+      "price": 179.9,
+      "image": "https://rocketseat-cdn.s3-sa-east-1.amazonaws.com/modulo-redux/tenis1.jpg"
+    }
+  ],
+  "stock": [
+    {
+      "id": 1,
+      "amount": 3
+    },
+    {
+      "id": 2,
+      "amount": 5
+    },
+    {
+      "id": 3,
+      "amount": 2
+    },
+    {
+      "id": 4,
+      "amount": 1
+    },
+    {
+      "id": 5,
+      "amount": 5
+    },
+    {
+      "id": 6,
+      "amount": 10
+    }
+  ]
+}
