@@ -12,7 +12,7 @@ const PX1 = () => {
     const [data, setData] = useState([]); 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios("http://localhost:8000/accordionData/");
+            const result = await axios("https://json-server-vercel-cyruslung.vercel.app/accordionData/");
             setData(result.data);
             console.log(result.data)
         };
