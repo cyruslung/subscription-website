@@ -44,18 +44,20 @@ const SignIn = () => {
         // getCurrentUser(); 
     }, []);
 
-    useEffect(() => {
-        const isLoggedIn = localStorage.getItem('userinfo');
-        if (isLoggedIn) {
-            // 如果已登錄，導航到指定頁面
-            router.prefetch('/precisionX1');
-            router.push('/precisionX1');
-        } else {
-            // 如果未登錄，執行其他邏輯或跳轉到登錄頁面
-            router.prefetch('/signin');
-            router.push('/signin');
-        }
-    }, []);
+    // useEffect(() => {
+    //     if (typeof window === 'undefined') return; // 在伺服器端不執行相關邏輯
+
+    //     const isLoggedIn = localStorage.getItem('userinfo');
+    //     if (isLoggedIn) {
+    //         // 如果已登錄，導航到指定頁面
+    //         router.prefetch('/precisionX1');
+    //         router.push('/precisionX1');
+    //     } else {
+    //         // 如果未登錄，執行其他邏輯或跳轉到登錄頁面
+    //         router.prefetch('/signin');
+    //         router.push('/signin');
+    //     }
+    // }, []);
 
     const fieldFocusShowError = (touched: any, checkField: string) => {
         if (!focusField) return;

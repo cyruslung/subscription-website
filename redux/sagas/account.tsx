@@ -5,20 +5,22 @@ import api from "@/services/refreshTokenApi";
 import UserService from "@/services/user.service";
 
 // 取得 localStorage 的 jwtToken
-let jwtToken = '';
-try {
-    const userinfo = localStorage.getItem('userinfo');
-    if (userinfo) {
-        const parsedData = JSON.parse(userinfo);
-        jwtToken = parsedData.token || '';
-    }
-} catch (error) {
-    console.error('Error parsing JSON data from localStorage:', error);
-}
+// let jwtToken = '';
+// try {
+//     const userinfo = localStorage.getItem('userinfo');
+//     if (userinfo) {
+//         const parsedData = JSON.parse(userinfo);
+//         jwtToken = parsedData.token || '';
+//     }
+// } catch (error) {
+//     console.error('Error parsing JSON data from localStorage:', error);
+// }
 
 function* getAccountSaga() {
+    if (typeof window === 'undefined') return;
+
     try {
-        const response = yield fetch('https://api.demo.com/subscription/Member/GetMember');
+        const response = yield fetch('https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Member/GetMember');
         const account = yield response.json();
         // 這裡可以直接將數據儲存到 state 中
         yield put({ type: GET_ACCOUNT, payload: account });
@@ -28,8 +30,10 @@ function* getAccountSaga() {
 }
 
 function* accountEmailSaga() {
+    if (typeof window === 'undefined') return;
+
     try {
-        const response = yield fetch('https://api.demo.com/subscription/Member/UpdateEmail');
+        const response = yield fetch('https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Member/UpdateEmail');
         const accountEmail = yield response.json();
         // 這裡可以直接將數據儲存到 state 中
         yield put({ type: UPDATE_ACCOUNT_EMAIL, payload: accountEmail });
@@ -39,8 +43,10 @@ function* accountEmailSaga() {
 }
 
 function* accountPasswordSaga() {
+    if (typeof window === 'undefined') return;
+
     try {
-        const response = yield fetch('https://api.demo.com/subscription/Member/UpdatePassword');
+        const response = yield fetch('https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Member/UpdatePassword');
         const accountPassword = yield response.json();
         // 這裡可以直接將數據儲存到 state 中
         yield put({ type: UPDATE_ACCOUNT_PASSWORD, payload: accountPassword });
@@ -50,8 +56,10 @@ function* accountPasswordSaga() {
 }
 
 function* accountNameSaga() {
+    if (typeof window === 'undefined') return;
+
     try {
-        const response = yield fetch('https://api.demo.com/subscription/Member/UpdateName');
+        const response = yield fetch('https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Member/UpdateName');
         const accountName = yield response.json();
         // 這裡可以直接將數據儲存到 state 中
         yield put({ type: UPDATE_ACCOUNT_NAME, payload: accountName });
@@ -61,8 +69,10 @@ function* accountNameSaga() {
 }
 
 function* accountMobileSaga() {
+    if (typeof window === 'undefined') return;
+
     try {
-        const response = yield fetch('https://api.demo.com/subscription/Member/UpdateMobile');
+        const response = yield fetch('https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Member/UpdateMobile');
         const accountMobile = yield response.json();
         // 這裡可以直接將數據儲存到 state 中
         yield put({ type: UPDATE_ACCOUNT_MOBILE, payload: accountMobile });
@@ -72,8 +82,10 @@ function* accountMobileSaga() {
 }
 
 function* getSubcriptionStatusSaga() {
+    if (typeof window === 'undefined') return;
+
     try {
-        const response = yield call(api.post, 'https://api.demo.com/subscription/Order/GetSubcriptionStatus');
+        const response = yield call(api.post, 'https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Order/GetSubcriptionStatus');
         const subscriptionSatus = yield response.json();
         // 這裡可以直接將數據儲存到 state 中
         console.log("subscriptionSatus:", subscriptionSatus.data)
@@ -84,8 +96,10 @@ function* getSubcriptionStatusSaga() {
 }
 
 function* updateAutoRenewSaga(action: any) {
+    if (typeof window === 'undefined') return;
+
     try {
-        const response = yield fetch('https://api.demo.com/subscription/Order/AutoRenew/', {
+        const response = yield fetch('https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Order/AutoRenew', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(action.payload),
@@ -99,8 +113,10 @@ function* updateAutoRenewSaga(action: any) {
 }
 
 function* getOrderHistorySaga(action: any) {
+    if (typeof window === 'undefined') return;
+
     try {
-        const response = yield fetch('https://api.demo.com/subscription/Order/GetOrderHistory', {
+        const response = yield fetch('https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Order/GetOrderHistory', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(action.payload),
@@ -114,8 +130,10 @@ function* getOrderHistorySaga(action: any) {
 }
 
 function* getDeviceSaga(action: any) {
+    if (typeof window === 'undefined') return;
+
     try {
-        const response = yield fetch('https://api.demo.com/subscription/Device/GetDevices', {
+        const response = yield fetch('https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Device/GetDevices', {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(action.payload),
@@ -129,8 +147,10 @@ function* getDeviceSaga(action: any) {
 }
 
 function* deleteDeviceSaga(action: any) {
+    if (typeof window === 'undefined') return;
+
     try {
-        const response = yield fetch('https://api.demo.com/subscription/Device/RemoveDevice', {
+        const response = yield fetch('https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Device/RemoveDevice', {
             method: 'DELETE',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(action.payload),

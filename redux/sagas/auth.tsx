@@ -4,11 +4,13 @@ import { SIGNIN } from "@/constants/index";
 import { signInSuccessful, signInFailed, setAuthenticating } from "@/actions/auth";
 
 function* signIn({ payload }: any): any {
+  if (typeof window === 'undefined') return;
+
   try {
     const { account, password, userIP, remember, googleToken } = payload;
 
     // 呼叫 API 進行登入
-    const response = yield call(fetch, "https://api.demo.com/subscription/Member/Login", {
+    const response = yield call(fetch, "https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Member/Login", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ account, password }),
@@ -20,7 +22,7 @@ function* signIn({ payload }: any): any {
     // 處理登入成功的情況
     if (data.success) {
       // 儲存使用者資訊到本地端
-      localStorage.setItem("user", JSON.stringify(data.user));
+      // localStorage.setItem("user", JSON.stringify(data.user));
 
       // 更新認證狀態和認證成功的資料
       yield put(setAuthenticating(false));

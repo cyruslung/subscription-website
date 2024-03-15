@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-const API_BASE_URL = 'https://api.demo.com/subscription'; // 根據實際的API地址進行修改
+const API_BASE_URL = 'https://my-json-server.typicode.com/cyruslung/demo-api/subscription'; // 根據實際的API地址進行修改
 
 export const subscribe = async (plan: string) => {
     try {

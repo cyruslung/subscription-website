@@ -1,4 +1,4 @@
-const host = "https://api.demo.com/subscription/";
+const host = "https://my-json-server.typicode.com/cyruslung/demo-api/subscription/";
 const loginTokenAPI = host + "member/login";
 const paymentTokenAPI = host + "Payment/getpaymenttoken";
 const createOrderAPI = host + "Payment/createorder";

@@ -3,13 +3,15 @@ import { SUBSCRIBE, SUBSCRIBE_SUCCESS, SUBSCRIBE_FAILURE, CHECKOUT, CHECKOUT_SUC
 import { subscribe, checkout, getToken, addToCart } from '@/services/subscribeApi';
 
 function* handleSubscribe(action:any) {
+    if (typeof window === 'undefined') return;
+
     try {
         const { plan } = action.payload;
         // 調用訂閱的API並將選擇的訂閱方案發送給後端
         yield call(subscribe, plan);
         
         // 將訂閱方案儲存到localStorage中
-        localStorage.setItem('selectedPlan', plan);
+        // localStorage.setItem('selectedPlan', plan);
         // 訂閱成功
         yield put({ type: SUBSCRIBE_SUCCESS, payload: plan });
         // 觸發結帳動作
@@ -21,6 +23,8 @@ function* handleSubscribe(action:any) {
 }
 
 function* handleCheckout() {
+    if (typeof window === 'undefined') return;
+
     try {
         // 呼叫 API 進行結帳
         const response = yield call(checkout);

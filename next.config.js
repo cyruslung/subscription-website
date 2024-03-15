@@ -4,9 +4,9 @@ const nextConfig = {
   basePath: '',
   env: {
     IsQAS: process.env.NODE_ENV === 'production' ? true : true,
-    PublicSite: process.env.NODE_ENV === 'production' ? "https://demo.com" : "https://demo.com",
+    PublicSite: process.env.NODE_ENV === 'production' ? "https://subscription-website-cyruslung.vercel.app/" : "https://subscription-website-cyruslung.vercel.app/",
     SecureSite: process.env.NODE_ENV === 'production' ? "https://secure.demo.com" : "https://secure.demo.com",
-    ApiUrl: process.env.NODE_ENV === 'production' ? "https://api.demo.com/sub/" : "https://api.demo.com/sub/",
+    ApiUrl: process.env.NODE_ENV === 'production' ? "https://my-json-server.typicode.com/cyruslung/demo-api/sub/" : "https://my-json-server.typicode.com/cyruslung/demo-api/sub/",
     ShowDebug: process.env.NODE_ENV === 'production' ? false : true,
   },
   eslint: {
@@ -19,7 +19,7 @@ const nextConfig = {
     return [
       {
         source: '/',
-        destination: '/precisionX1', // https://demo.com
+        destination: '/precisionX1', // https://subscription-website-cyruslung.vercel.app/
         permanent: false,
         basePath: false
       },

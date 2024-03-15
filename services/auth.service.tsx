@@ -2,9 +2,11 @@ import axios from "axios";
 import router from 'next/router';
 
 
-const API_URL = "https://api.demo.com/subscription/Member/";
+const API_URL = "https://my-json-server.typicode.com/cyruslung/demo-api/subscription/Member/";
 
 export const register = (account: string, email: string, password: string) => {
+  if (typeof window === 'undefined') return;
+
   return axios.post(API_URL + "users", {
     account,
     email,
@@ -13,6 +15,7 @@ export const register = (account: string, email: string, password: string) => {
 };
 
 export const login = (account: string, password: string) => {
+  if (typeof window === 'undefined') return;
 
   return axios
     .post(API_URL + "Login", {
@@ -35,7 +38,7 @@ export const login = (account: string, password: string) => {
           var refreshToken = response.data.result.refreshToken;
           var userInfo = '{ "token":"' + token +'","refreshToken":"'+refreshToken + '","account":"'+account+ '"}';
           */
-          localStorage.setItem("userinfo", userInfodataStr);
+          // localStorage.setItem("userinfo", userInfodataStr);
           window.location.reload();
 
         }
@@ -54,18 +57,22 @@ export const login = (account: string, password: string) => {
 };
 
 export const logout = () => {
-  localStorage.removeItem("userinfo");
+  if (typeof window === 'undefined') return;
+
+  // localStorage.removeItem("userinfo");
 
   window.location.reload();
   router.push('/precisionX1');
 };
 
 export const getCurrentUser = () => {
-  const userStr = localStorage.getItem("userinfo");
-  if (userStr) {
-    return JSON.parse(userStr);
-  }
-  else
-    return null;
+  if (typeof window === 'undefined') return;
+
+  // const userStr = localStorage.getItem("userinfo");
+  // if (userStr) {
+  //   return JSON.parse(userStr);
+  // }
+  // else
+  //   return null;
 };
 

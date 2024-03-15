@@ -67,6 +67,8 @@ const BraintreeDropIn = (props: { show: boolean; token: string; refreshToken: st
     };
 
     const initializeBraintree = async () => {
+        if (typeof window === 'undefined') return; // 在伺服器端不執行相關邏輯
+        
         // 調用fetchPaymentToken函數
         const userinfo = localStorage.getItem('userinfo');
         const jwtToken = userinfo ? JSON.parse(userinfo).token : '';
@@ -145,7 +147,7 @@ const BraintreeDropIn = (props: { show: boolean; token: string; refreshToken: st
     };
 
     useEffect(() => {
-        initializeBraintree();
+        // initializeBraintree();
 
         // if (show && paymentToken) { // 當show為true且paymentToken存在時
         //     initializeBraintree();

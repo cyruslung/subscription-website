@@ -15,23 +15,25 @@ const RefreshTokenFn = async () => {
   );
 
   try {
+    if (typeof window === 'undefined') return; // 在伺服器端不執行相關邏輯
+
     const response: any = await axiosBase.post("/Member/refreshToken", {
       refreshToken: userRefreshToken?.userRefreshToken,
     });
 
     const { session } = response.data;
 
-    if (!session?.accessToken) {
-      localStorage.removeItem("session");
-      localStorage.removeItem("user");
-    }
+    // if (!session?.accessToken) {
+    //   localStorage.removeItem("session");
+    //   localStorage.removeItem("user");
+    // }
 
-    localStorage.setItem("session", JSON.stringify(session));
+    // localStorage.setItem("session", JSON.stringify(session));
 
     return session;
   } catch (error) {
-    localStorage.removeItem("session");
-    localStorage.removeItem("user");
+    // localStorage.removeItem("session");
+    // localStorage.removeItem("user");
   }
 };
 

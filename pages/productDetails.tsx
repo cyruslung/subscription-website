@@ -30,19 +30,21 @@ const ProductDetails = () => {
     const selectedPlan = useSelector((state: any) => state.subscribe.selectedPlan);
 
     useEffect(() => {
+        if (typeof window === 'undefined') return; // 在伺服器端不執行相關邏輯
+
         const checkLoginStatus = async () => {
             try {
-                const userInfo = localStorage.getItem('userinfo');
-                console.log("userInfo:",userInfo);
-                if (!userInfo) {
-                    router.prefetch('/signin');
-                } else {
-                    const { token, refreshToken } = JSON.parse(userInfo);
-                    console.log("token:",token);
-                    console.log("refreshToken:",refreshToken);
-                    setToken(token);
-                    setRefreshToken(refreshToken);
-                }
+                // const userInfo = localStorage.getItem('userinfo');
+                // console.log("userInfo:",userInfo);
+                // if (!userInfo) {
+                //     router.prefetch('/signin');
+                // } else {
+                //     const { token, refreshToken } = JSON.parse(userInfo);
+                //     console.log("token:",token);
+                //     console.log("refreshToken:",refreshToken);
+                //     setToken(token);
+                //     setRefreshToken(refreshToken);
+                // }
             } catch (error) {
                 console.error('Error checking login status:', error);
             }
@@ -53,6 +55,8 @@ const ProductDetails = () => {
 
 
     useEffect(() => {
+        if (typeof window === 'undefined') return; // 在伺服器端不執行相關邏輯
+
         const storedPlan = localStorage.getItem('selectedPlan');
         if (storedPlan) {
             dispatch(subscribe(selectedPlan)); // 使用 subscribe action 創建函數來 dispatch 訂閱 action

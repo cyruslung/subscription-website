@@ -3,7 +3,7 @@ import TokenService from "./token.service";
 
 
 const instance = axios.create({
-  baseURL: "https://api.demo.com/subscription",
+  baseURL: "https://my-json-server.typicode.com/cyruslung/demo-api/subscription",
   headers: {
     "Content-Type": "application/json",
   },

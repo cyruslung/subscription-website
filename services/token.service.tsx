@@ -1,38 +1,50 @@
 class TokenService {
   getLocalRefreshToken() {
-    const userInfo = JSON.parse(localStorage.getItem("userinfo") || '{}');
-    return userInfo?.refreshToken;
+    if (typeof window === 'undefined') return;
+
+    // const userInfo = JSON.parse(localStorage.getItem("userinfo") || '{}');
+    // return userInfo?.refreshToken;
   }
 
   getLocalAccessToken() {
+    if (typeof window === 'undefined') return;
+
     //const user = JSON.parse(localStorage.getItem("user")!); 
-    const userInfo = JSON.parse(localStorage.getItem("userinfo") || '{}');
+    // const userInfo = JSON.parse(localStorage.getItem("userinfo") || '{}');
     //alert(userInfo);
-    return userInfo?.token;
+    // return userInfo?.token;
   }
 
   updateLocalAccessToken(data: any) {
-    let userInfo = JSON.parse(localStorage.getItem("userinfo") || '{}');
-    userInfo.token = data.token;
-    userInfo.refreshToken = data.refreshToken;
+    if (typeof window === 'undefined') return;
+
+    // let userInfo = JSON.parse(localStorage.getItem("userinfo") || '{}');
+    // userInfo.token = data.token;
+    // userInfo.refreshToken = data.refreshToken;
     //debugger;
     //localStorage.removeItem("user");
-    localStorage.setItem("userinfo", JSON.stringify(userInfo));
+    // localStorage.setItem("userinfo", JSON.stringify(userInfo));
 
     //alert("update Token \r\n" + data.token);
   }
 
   getUser() {
-    return JSON.parse(localStorage.getItem("userinfo") || '{}');
+    if (typeof window === 'undefined') return;
+
+    // return JSON.parse(localStorage.getItem("userinfo") || '{}');
   }
 
   setUser(userInfo: any) {
+    if (typeof window === 'undefined') return;
+
     //console.log(JSON.stringify(userInfo));
-    localStorage.setItem("userinfo", JSON.stringify(userInfo));
+    // localStorage.setItem("userinfo", JSON.stringify(userInfo));
   }
 
   removeUser() {
-    localStorage.removeItem("userinfo");
+    if (typeof window === 'undefined') return;
+    
+    // localStorage.removeItem("userinfo");
   }
 }
 

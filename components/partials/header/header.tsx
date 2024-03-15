@@ -18,35 +18,35 @@ function Header() {
 	const [isreload, setisreload] = useState(true);
 
 	const logOut = () => {
-		AuthService.logout();
-		setCurrentUser(undefined);
+		// AuthService.logout();
+		// setCurrentUser(undefined);
 		router.push('/signin');
 	};
 
-	useEffect(() => {
-		const user = AuthService.getCurrentUser();
-		if (user) {
-			setCurrentUser(user);
-			setfirstLogin(true);
-			// router.push('/myAccount');
-		}
-		EventBus.on("logout", logOut);
-		return () => {
-			EventBus.remove("logout", logOut);
-		};
-	}, [firstLogin]);
+	// useEffect(() => {
+	// 	const user = AuthService.getCurrentUser();
+	// 	if (user) {
+	// 		setCurrentUser(user);
+	// 		setfirstLogin(true);
+	// 		// router.push('/myAccount');
+	// 	}
+	// 	EventBus.on("logout", logOut);
+	// 	return () => {
+	// 		EventBus.remove("logout", logOut);
+	// 	};
+	// }, [firstLogin]);
 
-	useEffect(() => {
-		const fetchData = async () => {
-			const result: any = await UService.getMember();
-			if (result.data.isSuccess) {
-				setData(result.data.result);
-				setisreload(false);
-			}
-			console.log(result.data.result)
-		};
-		fetchData();
-	}, [isreload]);
+	// useEffect(() => {
+	// 	const fetchData = async () => {
+	// 		const result: any = await UService.getMember();
+	// 		if (result.data.isSuccess) {
+	// 			setData(result.data.result);
+	// 			setisreload(false);
+	// 		}
+	// 		console.log(result.data.result)
+	// 	};
+	// 	fetchData();
+	// }, [isreload]);
 
 	return (
 		<header>
